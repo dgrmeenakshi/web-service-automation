@@ -23,8 +23,7 @@ namespace APIDemo
             restRequest.AddHeader("Accept", "application/json");
             return restRequest;
         }
-
-        public IRestRequest POST(string payload)
+    public IRestRequest CreatePostRequest(string payload)
         {
             restRequest = new RestRequest(Method.POST);
             restRequest.AddHeader("Accept", "application/json");

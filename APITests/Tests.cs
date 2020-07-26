@@ -14,5 +14,13 @@ namespace APITests
             var content = demo.GetUsers();
             Assert.AreEqual("7", content.data[0].id.ToString());
         }
+        [TestMethod]
+        public void VerifyStatusCodeforNewUserCreation()
+        {
+            Demo demo = new Demo();
+            var actualStatusCode = demo.CreateUser();
+            Assert.AreEqual("Created", actualStatusCode, "User not created");
+
+        }
     }
 }
