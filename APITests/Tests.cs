@@ -12,7 +12,7 @@ namespace APITests
         {
             Demo demo = new Demo();
             var content = demo.GetUsers();
-            Assert.AreEqual("7", content.data[0].id);
+            Assert.AreEqual("7", content.data[0].id.ToString());
         }
     }
 }
